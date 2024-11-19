@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+:root{
+    --ff:"Comfortaa", sans-serif;
+    --colorprimary:#FFF;
+    --colorsecondary:#000;
+    --coloraccent:#E6B3B3;
+    --h1: 64px, var(--ff);
+    --p: 18px, var(--ff);
+}
+body{
+    max-width: 1280px;
+    margin: 100px auto;
+    background: var(--colorsecondary);
+    color: var(--colorprimary);
+    font: var(--p);
+    display: flex;
+    gap: 40px; 
+    align-items: center;
+    flex-wrap: wrap;
+}
+h1{
+    font: var(--h1);
+    align-items: center;
+    flex-wrap: wrap;
+}
+p{
+    font: var(--p);
+    align-items: center;
+    flex-wrap: wrap;
+}
+a{
+    background: var(--coloraccent);
+    color: var(--colorsecondary);
+    padding: 20px 40px;
+    text-decoration: none;
+    font-weight: normal;
+    border-radius: 20px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.second button{
+    background: none; 
+    border:solid 2px var(--coloraccent); 
+}
+img{
+    width: 100%;
+}
