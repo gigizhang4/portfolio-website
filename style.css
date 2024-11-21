@@ -2,9 +2,9 @@
 
 :root{
     --ff:"Comfortaa", sans-serif;
-    --colorprimary:#FFF;
-    --colorsecondary:#000;
-    --coloraccent:#E6B3B3;
+    --colorprimary:#ffffff;
+    --colorsecondary:hwb(210 64% 18% / 0.972);
+    --coloraccent:#152736;
     --h1: 64px, var(--ff);
     --p: 18px, var(--ff);
 }
