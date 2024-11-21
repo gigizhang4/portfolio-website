@@ -1,0 +1,59 @@
+
+ public void delete(int data) {
+        root = recursiveDelete(root,data);
+    }
+    private BSTNode recursiveDelete(BSTNode node,int data){
+        //if it's root 
+        if (node==null){
+            return node; //same as return null bc node is null 
+        }
+
+        //if data is on the left 
+        if (data<node.data){
+            //reassigns node's left child 
+            node.leftChild =  recursiveDelete(node.leftChild, data);
+        }
+
+        else if (data>node.data){
+            node.rightChild = recursiveDelete(node.rightChild, data);  
+        }
+
+        // we found data 
+        else{
+            //if we have 0 child
+            if(node.leftChild==null && node.rightChild ==null) {
+                return null; //makes the parent.node.leftchild or rightchild set to null, aka deletes the node's data 
+            }
+            //if we have 1 child, doesnt have left child
+            if(node.leftChild==null){
+                return node.rightChild;
+            }
+            //if we have 1 child, doesnt have right child
+            if(node.rightChild==null){
+                return node.leftChild;
+            }
+            //if we have 2 child
+            else{
+                BSTNode numBefore = getMax(node.leftChild); //find max of the left 
+                int numBeforeValue = numBefore.data; 
+                node.data = numBeforeValue; //update node
+                node.leftChild = recursiveDelete(node.leftChild,numBeforeValue); //update the leftchild 
+            }
+        }
+    
+        return node; 
+    }
+
+
+
+    //assumes node is not null
+    //this might be useful later on...
+    
+    
+    
+    public BSTNode getMax(BSTNode node){
+        while(node.rightChild!= null) {
+            node = node.rightChild;
+        }
+        return node;
+    }

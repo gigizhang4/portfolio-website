@@ -49,5 +49,6 @@ a{
     border:solid 2px var(--coloraccent); 
 }
 img{
-    width: 100%;
+    width: 50%;
+    border-left-color: aquamarine;
 }
