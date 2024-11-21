@@ -49,5 +49,7 @@ a{
     border:solid 2px var(--coloraccent); 
 }
 img{
+    visibility: visible;
+    display: block;
     width: 50%
 }
