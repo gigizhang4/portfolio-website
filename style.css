@@ -1,23 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
 
+/* *{
+    cursor: none !important; 
+} */
+body, a, button, input, textarea{
+    cursor: none; 
+}
 :root{
-    --ff:"Comfortaa", sans-serif;
+    --font:"Comfortaa", sans-serif;
     --colorprimary:#ffffff;
     --colorsecondary:hwb(210 64% 18% / 0.972);
     --coloraccent:#152736;
-    --h1: 64px, var(--ff);
-    --p: 18px, var(--ff);
+    --h1: 64px var(--font);
+    --p: 18px var(--font);
 }
+
+/* body {
+    margin: 0;
+    padding: 0;
+    cursor: none; 
+    position: relative;
+}
+
+.page-content {
+    max-width: 1280px;
+    margin: 100px auto; 
+    padding: 0; 
+    background: var(--colorsecondary);
+    color: var(--colorprimary);
+    font: var(--p);
+    display: flex; 
+    flex-direction: column; 
+    gap: 40px; 
+    align-items: center; 
+} */
+
+
+
 body{
     max-width: 1280px;
-    margin: 100px auto;
+    margin-top: 50x;
+    margin: 100px;
+    /* margin: 0; */
+    padding: 0; 
     background: var(--colorsecondary);
     color: var(--colorprimary);
     font: var(--p);
     display: flex;
-    gap: 40px; 
+    flex-direction: column;
+    gap: 40px;
+    flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
+    cursor: none;
+    
+    
+}
+.custom-cursor {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-image: url('output-onlinepngtools.png');
+    background-size: contain; 
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 100;
+    /* transform: translate(-50%, -50%);  */
+    transition: transform 0.15s ease, background-color 0.15s ease;
 }
 h1{
     font: var(--h1);
@@ -44,12 +94,48 @@ a{
     align-items: center;
     flex-wrap: wrap;
 }
-.second button{
+/* a, button, input, textarea{
+    cursor: none; 
+}
+a:hover, button:hover, input:hover, textarea:hover {
+    cursor: none;
+} */
+.second button {
     background: none; 
     border:solid 2px var(--coloraccent); 
 }
+
 img{
     visibility: visible;
     display: block;
     width: 50%
 }
+.navbar {
+    display: flex;
+    justify-content: center; 
+    background-color: #8fa4cd;
+    justify-content: flex-end; 
+    padding: 10px 20px;
+    z-index: 1000; 
+}
+
+.navbar a {
+    color:var(--colorprimary);
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 18px;
+    transition:
+    0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: var(--coloraccent);
+    border-radius: 5px;
+}
+
+.navbar a.active {
+    background-color: #0d2635;
+    border-radius: 5px;
+}
+
+
